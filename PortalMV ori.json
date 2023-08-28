@@ -1,0 +1,2244 @@
+{
+	"info": {
+		"_postman_id": "96d851d3-a098-433e-8e86-d9cab58be268",
+		"name": "PortalMV - Master",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Prepare",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/prepare?apiKey=567652d45b71979b714fb5d08c7f058a",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"prepare"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/status?apiKey=567652d45b71979b714fb5d08c7f058a&requestNumber=PA3141-PR3071-2210240337",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"status"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"description": "API Key. Required."
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA3141-PR3071-2210240337",
+							"description": "Request number. Required."
+						},
+						{
+							"key": "referenceInfo",
+							"value": "5y6htyehw534",
+							"description": "Reference Info. optional.",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "3071",
+							"description": "Get product id from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-12-01",
+							"description": "Start policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-12-01",
+							"description": "End policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "vehicleCode",
+							"value": "TOYKIJ140",
+							"description": "Get vehicle code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLocationCode",
+							"value": "ID-YO ",
+							"description": "Get vehicle location code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleFunctionCode",
+							"value": "OCC02",
+							"description": "Get vehicle function code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleConditionCode",
+							"value": "NEW",
+							"description": "Get vehicle condition code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLicenseNumber",
+							"value": "B12342",
+							"description": "Vehicle license number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleChassisNumber",
+							"value": "C12343",
+							"description": "Vehicle chassis number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleMachineNumber",
+							"value": "M12341",
+							"description": "Vehicle machine number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleYear",
+							"value": "2018",
+							"description": "Year built",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePrice",
+							"value": "242320000",
+							"description": "Vehicle price",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan guaranteed). Use new line to separate condition.",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition2",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan non-guaranteed)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[EQVET]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable EQVET (Earthquake, Volcano Eruption, Tsunami)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TSFHL]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable TSFHL (Typhoon, Storm, Flood, Hail, Landslide)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[SRCC]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable SRCC (Strike, Riot, Civil Commotion)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TS]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable TS (Terrorism & Sabotage)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[ATPM]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable ATPM (Workshop Facility)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Autocillin Rescue]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable autocillin rescue.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Theft Driver]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable theft by driver coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Medical Driver]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable medical driver coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Medical Passenger]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable medical passenger coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Driver]",
+							"value": "",
+							"description": "Personal Accident Driver Limit. 0 To disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Passenger]",
+							"value": "",
+							"description": "Personal Accident Passenger Limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageQuantities[PA Passenger]",
+							"value": "",
+							"description": "Number of passengers.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[TPL]",
+							"value": "",
+							"description": "Third party liability limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[0]",
+							"value": "",
+							"description": "Additional equipment name. Optional. Idem until number 5.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[0]",
+							"value": "",
+							"description": "Additional equipment price. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[0]",
+							"value": "",
+							"description": "Additional equipment quantity. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "commissionPercentage",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "discountType",
+							"value": "Fixed",
+							"description": "Percent or Fixed",
+							"type": "text"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "0",
+							"description": "Discount in percentage.",
+							"type": "text"
+						},
+						{
+							"key": "discountFixed",
+							"value": "0",
+							"description": "Discount in fixed",
+							"type": "text"
+						},
+						{
+							"key": "sendHardCopyPolicy",
+							"value": "1",
+							"description": "Flag 1 or 0. Send hard policy policy. ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/calculate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quotation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "1",
+							"description": "Get product id from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2020-10-11",
+							"description": "Start policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2021-10-11",
+							"description": "End policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "vehicleCode",
+							"value": "TOYKIJ140",
+							"description": "Get vehicle code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLocationCode",
+							"value": "ID-YO ",
+							"description": "Get vehicle location code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleFunctionCode",
+							"value": "OCC02",
+							"description": "Get vehicle function code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleConditionCode",
+							"value": "NEW",
+							"description": "Get vehicle condition code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLicenseNumber",
+							"value": "B123466",
+							"description": "Vehicle license number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleChassisNumber",
+							"value": "C123466",
+							"description": "Vehicle chassis number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleMachineNumber",
+							"value": "M1234",
+							"description": "Vehicle machine number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleYear",
+							"value": "2018",
+							"description": "Year built",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePrice",
+							"value": "500000000",
+							"description": "Vehicle price",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan guaranteed). Use new line to separate condition.",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition2",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan non-guaranteed)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[EQVET]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable EQVET (Earthquake, Volcano Eruption, Tsunami)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TSFHL]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable TSFHL (Typhoon, Storm, Flood, Hail, Landslide)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[SRCC]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable SRCC (Strike, Riot, Civil Commotion)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TS]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable TS (Terrorism & Sabotage)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[ATPM]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable ATPM (Workshop Facility)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Autocillin Rescue]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable autocillin rescue.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Driver]",
+							"value": "10000000",
+							"description": "Flag 1 or 0. Enable theft by driver coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Passenger]",
+							"value": "20000000",
+							"description": "Flag 1 or 0. Enable medical driver coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageQuantities[PA Passenger]",
+							"value": "2",
+							"description": "Flag 1 or 0. Enable medical passenger coverage.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[TPL]",
+							"value": "30000000",
+							"description": "Personal Accident Driver Limit. 0 To disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[0]",
+							"value": "dashboard",
+							"description": "Personal Accident Passenger Limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[0]",
+							"value": "5000000",
+							"description": "Number of passengers.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[0]",
+							"value": "1",
+							"description": "Third party liability limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[1]",
+							"value": "velg",
+							"description": "Additional equipment name. Optional. Idem until number 5.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[1]",
+							"value": "1000000",
+							"description": "Additional equipment price. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[1]",
+							"value": "4",
+							"description": "Additional equipment quantity. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "personalIdType",
+							"value": "KTP",
+							"description": "Insured personal ID type (KTP, SIM, or NPWP)",
+							"type": "text"
+						},
+						{
+							"key": "personalIdNumber",
+							"value": "008",
+							"description": "Insured personal ID Number",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Donald Duck",
+							"description": "Insured Name",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dexcell.plus@gmail.com",
+							"description": "Insured Email",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "0812391293139",
+							"description": "Insured Mobile Number",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Mangga No. 23",
+							"description": "Insured Address",
+							"type": "text"
+						},
+						{
+							"key": "provinceCode",
+							"value": "DKI Jakarta",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "cityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "sendHardCopyPolicy",
+							"value": "1",
+							"description": "Flag 1 or 0. Send hard policy policy.  If 1 then enter attention detail.",
+							"type": "text"
+						},
+						{
+							"key": "sameHardCopyDeliveryAddress",
+							"value": "0",
+							"description": "Flag 1 or 0. If 1 delivery adress same with insured address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionName",
+							"value": "Budi",
+							"description": "Hard copy policy receiver name.",
+							"type": "text"
+						},
+						{
+							"key": "attentionEmail",
+							"value": "budi@sharklasers.com",
+							"description": "Hard copy policy receiver email.",
+							"type": "text"
+						},
+						{
+							"key": "attentionMobileNumber",
+							"value": "08191919119",
+							"description": "Hard copy policy receiver mobile number.",
+							"type": "text"
+						},
+						{
+							"key": "attentionAddress",
+							"value": "Jl. Rumahku No 11",
+							"description": "Hard copy policy receiver address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionProvinceCode",
+							"value": "DKI Jakarta",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "attentionCityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "sendEmail",
+							"value": "1",
+							"description": "Flag 1 or 0 to send email.",
+							"type": "text"
+						},
+						{
+							"key": "discountType",
+							"value": "Percent",
+							"description": "Percent or Fixed",
+							"type": "text"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "3",
+							"description": "Discount in percentage.",
+							"type": "text"
+						},
+						{
+							"key": "discountFixed",
+							"value": "0",
+							"description": "Discount in fixed",
+							"type": "text"
+						},
+						{
+							"key": "subjectToNoClaimDate",
+							"value": "2021-08-01",
+							"description": "STNC Date. Format: yyyy-mm-dd. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "referenceInfo",
+							"value": "REFINFO",
+							"description": "Reference Info. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "surveyType",
+							"value": "Digital Survey",
+							"description": "Digital Survey / On the Spot Survey.",
+							"type": "text"
+						},
+						{
+							"key": "remark1",
+							"value": "REM1",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "remark2",
+							"value": "REM2",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "remark3",
+							"value": "REM3",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/quotation",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"quotation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cover Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA015-PR016-2108300138",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/cover-note",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cover-note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document Policy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA001-PR001-2009020002",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/documents-policy",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"documents-policy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "3071",
+							"description": "Get product id from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-10-03",
+							"description": "Start policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-10-03",
+							"description": "End policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "vehicleCode",
+							"value": "MITPAJ028",
+							"description": "Get vehicle code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLocationCode",
+							"value": "ID-JK",
+							"description": "Get vehicle location code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleFunctionCode",
+							"value": "OCC02",
+							"description": "Get vehicle function code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleConditionCode",
+							"value": "NEW",
+							"description": "Get vehicle condition code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLicenseNumber",
+							"value": "B6789JKI",
+							"description": "Vehicle license number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleChassisNumber",
+							"value": "MHK05K9948810",
+							"description": "Vehicle chassis number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleMachineNumber",
+							"value": "HJLLL2K0P112",
+							"description": "Vehicle machine number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleYear",
+							"value": "2022",
+							"description": "Year built",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePrice",
+							"value": "515600000",
+							"description": "Vehicle price",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition",
+							"value": "Baret",
+							"description": "Original defect (Cacat semula kendaraan guaranteed). Use new line to separate condition.",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition2",
+							"value": "Lampu mati",
+							"description": "Original defect (Cacat semula kendaraan non-guaranteed)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[EQVET]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable EQVET (Earthquake, Volcano Eruption, Tsunami)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TSFHL]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable TSFHL (Typhoon, Storm, Flood, Hail, Landslide)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[SRCC]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable SRCC (Strike, Riot, Civil Commotion)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TS]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable TS (Terrorism & Sabotage)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[ATPM]",
+							"value": "1",
+							"description": "Flag 1 or 0. Enable ATPM (Workshop Facility)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Autocillin Rescue]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable autocillin rescue.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Driver]",
+							"value": "25000000",
+							"description": "Personal Accident Driver Limit. 0 To disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Passenger]",
+							"value": "25000000",
+							"description": "Personal Accident Passenger Limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageQuantities[PA Passenger]",
+							"value": "4",
+							"description": "Number of passengers.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[TPL]",
+							"value": "50000000",
+							"description": "Third party liability limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[0]",
+							"value": "Ban",
+							"description": "Additional equipment name. Optional. Idem until number 5.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[0]",
+							"value": "10000000",
+							"description": "Additional equipment price. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[0]",
+							"value": "2",
+							"description": "Additional equipment quantity. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "personalIdType",
+							"value": "KTP",
+							"description": "Insured personal ID type (KTP, SIM, or NPWP)",
+							"type": "text"
+						},
+						{
+							"key": "personalIdNumber",
+							"value": "3173052702930011",
+							"description": "Insured personal ID Number",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ditya",
+							"description": "Insured Name",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ditya.mayang@zurich.co.id",
+							"description": "Insured Email",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "0812391293139",
+							"description": "Insured Mobile Number",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Mangga No. 23",
+							"description": "Insured Address",
+							"type": "text"
+						},
+						{
+							"key": "provinceCode",
+							"value": "DKI Jakarta",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "cityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "sendHardCopyPolicy",
+							"value": "1",
+							"description": "Flag 1 or 0. Send hard policy policy.  If 1 then enter attention detail.",
+							"type": "text"
+						},
+						{
+							"key": "sameHardCopyDeliveryAddress",
+							"value": "0",
+							"description": "Flag 1 or 0. If 1 delivery adress same with insured address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionName",
+							"value": "Ditya Attention",
+							"description": "Hard copy policy receiver name.",
+							"type": "text"
+						},
+						{
+							"key": "attentionEmail",
+							"value": "ditya.mayang@zurich.co.id",
+							"description": "Hard copy policy receiver email.",
+							"type": "text"
+						},
+						{
+							"key": "attentionMobileNumber",
+							"value": "08189274923859",
+							"description": "Hard copy policy receiver mobile number.",
+							"type": "text"
+						},
+						{
+							"key": "attentionAddress",
+							"value": "Jakarta",
+							"description": "Hard copy policy receiver address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionProvinceCode",
+							"value": "DKI Jakarta",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "attentionCityCode",
+							"value": "Kota Jakarta Timur",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "sendEmail",
+							"value": "1",
+							"description": "Flag 1 or 0 to send email.",
+							"type": "text"
+						},
+						{
+							"key": "documentFiles[Personal ID]",
+							"description": "Required. KTP/SIM/NPWP Photo.",
+							"type": "file",
+							"src": "/C:/Users/DITYA.MAYANG.GITDIR/OneDrive - Zurich APAC/Documents/Downloads/UAT SO.pdf"
+						},
+						{
+							"key": "documentFiles[STNK]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[BASTK]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Policy Existing]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Other]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Front]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Back]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Left]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Right]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Dashboard]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Chassis]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Machine]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Peneng]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Pre Existing Condition]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 1]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 2]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 3]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "commissionPercentage",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "discountType",
+							"value": "Percent",
+							"description": "Percent / Fixed",
+							"type": "text"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "10",
+							"description": "Discount in percentage.",
+							"type": "text"
+						},
+						{
+							"key": "discountFixed",
+							"value": "0",
+							"description": "Discount in fixed",
+							"type": "text"
+						},
+						{
+							"key": "subjectToNoClaimDate",
+							"value": "2022-10-04",
+							"description": "STNC Date. Format: yyyy-mm-dd. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "referenceInfo",
+							"value": "TEST_ADMFCD",
+							"description": "Reference Info. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "surveyType",
+							"value": "Digital Survey",
+							"description": "Digital Survey / On the Spot Survey.",
+							"type": "text"
+						},
+						{
+							"key": "remark1",
+							"value": "TEST_ADMFCD1",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "remark2",
+							"value": "TEST_ADMFCD2",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "remark3",
+							"value": "TEST_ADMFCD3",
+							"description": "Order remark. Optional.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/order",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resubmit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA001-PR001-2008280010",
+							"description": "Request Number. Required",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "1",
+							"description": "Get product id from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2020-08-29",
+							"description": "Start policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2021-08-29",
+							"description": "End policy date. Format: yyyy-mm-dd",
+							"type": "text"
+						},
+						{
+							"key": "vehicleCode",
+							"value": "DAIAYL003",
+							"description": "Get vehicle code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLocationCode",
+							"value": "ID-BE ",
+							"description": "Get vehicle location code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleFunctionCode",
+							"value": "OCC03",
+							"description": "Get vehicle function code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleConditionCode",
+							"value": "USED",
+							"description": "Get vehicle condition code from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "vehicleLicenseNumber",
+							"value": "b543ff",
+							"description": "Vehicle license number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleChassisNumber",
+							"value": "b42b415f34",
+							"description": "Vehicle chassis number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleMachineNumber",
+							"value": "b13v34",
+							"description": "Vehicle machine number",
+							"type": "text"
+						},
+						{
+							"key": "vehicleYear",
+							"value": "2020",
+							"description": "Year built",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePrice",
+							"value": "100000000",
+							"description": "Vehicle price",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan guaranteed). Use new line to separate condition.",
+							"type": "text"
+						},
+						{
+							"key": "vehiclePreExistingCondition2",
+							"value": "",
+							"description": "Original defect (Cacat semula kendaraan non-guaranteed)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[EQVET]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable EQVET (Earthquake, Volcano Eruption, Tsunami)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TSFHL]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable TSFHL (Typhoon, Storm, Flood, Hail, Landslide)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[SRCC]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable SRCC (Strike, Riot, Civil Commotion)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[TS]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable TS (Terrorism & Sabotage)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[ATPM]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable ATPM (Workshop Facility)",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageEnables[Autocillin Rescue]",
+							"value": "",
+							"description": "Flag 1 or 0. Enable autocillin rescue.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Driver]",
+							"value": "",
+							"description": "Personal Accident Driver Limit. 0 To disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[PA Passenger]",
+							"value": "",
+							"description": "Personal Accident Passenger Limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageQuantities[PA Passenger]",
+							"value": "",
+							"description": "Number of passengers.",
+							"type": "text"
+						},
+						{
+							"key": "additionalCoverageLimits[TPL]",
+							"value": "",
+							"description": "Third party liability limit. 0 to disable.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[0]",
+							"value": "",
+							"description": "Additional equipment name. Optional. Idem until number 5.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[0]",
+							"value": "",
+							"description": "Additional equipment price. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[0]",
+							"value": "",
+							"description": "Additional equipment quantity. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "2.6042",
+							"description": "Discount in percentage.",
+							"type": "text"
+						},
+						{
+							"key": "personalIdType",
+							"value": "KTP",
+							"description": "Insured personal ID type (KTP, SIM, or NPWP)",
+							"type": "text"
+						},
+						{
+							"key": "personalIdNumber",
+							"value": "1111111111222223",
+							"description": "Insured personal ID Number",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Agus S",
+							"description": "Insured Mobile Number",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "agusagus@sharklasers.com",
+							"description": "Insured Address",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "081292111111",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Mangga No. 23",
+							"description": "Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "provinceCode",
+							"value": "Nanggroe Aceh Darussalam (NAD)",
+							"description": "Flag 1 or 0. Send hard policy policy.  If 1 then enter attention detail.",
+							"type": "text"
+						},
+						{
+							"key": "cityCode",
+							"value": "Kab. Aceh Barat Daya",
+							"description": "Flag 1 or 0. If 1 delivery adress same with insured address.",
+							"type": "text"
+						},
+						{
+							"key": "sendHardCopyPolicy",
+							"value": "0",
+							"description": "Hard copy policy receiver name.",
+							"type": "text"
+						},
+						{
+							"key": "sameHardCopyDeliveryAddress",
+							"value": "1",
+							"description": "Hard copy policy receiver email.",
+							"type": "text"
+						},
+						{
+							"key": "attentionName",
+							"value": "Budi",
+							"description": "Hard copy policy receiver mobile number.",
+							"type": "text"
+						},
+						{
+							"key": "attentionEmail",
+							"value": "budi@gmail.com",
+							"description": "Hard copy policy receiver address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionMobileNumber",
+							"value": "08191919119",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "attentionAddress",
+							"value": "Jl. Rumahku No 11",
+							"description": "Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "attentionProvinceCode",
+							"value": "DKI Jakarta",
+							"description": "Flag 1 or 0 to send email.",
+							"type": "text"
+						},
+						{
+							"key": "attentionCityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Required. KTP/SIM/NPWP Photo.",
+							"type": "text"
+						},
+						{
+							"key": "sendEmail",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "commissionPercentage",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "discountType",
+							"value": "Fixed",
+							"type": "text"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "discountFixed",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "subjectToNoClaimDate",
+							"value": "2019-08-01",
+							"type": "text"
+						},
+						{
+							"key": "referenceInfo",
+							"value": "43g234g245",
+							"type": "text"
+						},
+						{
+							"key": "surveyType",
+							"value": "On the Spot Survey",
+							"type": "text"
+						},
+						{
+							"key": "remark1",
+							"value": "REM1",
+							"type": "text"
+						},
+						{
+							"key": "remark2",
+							"value": "REM2",
+							"type": "text"
+						},
+						{
+							"key": "remark3",
+							"value": "REM3",
+							"type": "text"
+						},
+						{
+							"key": "documentFiles[Personal ID]",
+							"description": "Required. KTP/SIM/NPWP Photo.",
+							"type": "file",
+							"src": "/Users/erick/Pictures/Sample/Personal ID/sample-ktp.jpg"
+						},
+						{
+							"key": "documentFiles[STNK]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[BASTK]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Policy Existing]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Other]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Front]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Back]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Left]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Right]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Dashboard]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Chassis]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Machine]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Peneng]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Pre Existing Condition]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 1]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 2]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "documentFiles[Car Other 3]",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/resubmit",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"resubmit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"description": "API Key. Required.",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA001-PR001-2010270014",
+							"description": "Request number. Required.",
+							"type": "text"
+						},
+						{
+							"key": "referenceInfo",
+							"value": "6475357637524",
+							"description": "Reference Info",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sendEmail",
+							"value": "0",
+							"description": "Flag 1 or 0 to send email. Required.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/cancel-order",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cancel-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"description": "API Key. Required.",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA3141-PR3071-2210240337",
+							"description": "Request number. Required.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[0]",
+							"value": "",
+							"description": "Additional equipment name. Optional. Idem until number 5.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[0]",
+							"value": "",
+							"description": "Additional equipment price. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[0]",
+							"value": "",
+							"description": "Additional equipment quantity. Optional.",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[1]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[2]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[3]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentNames[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentPrices[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "vehicleEquipmentQuantities[4]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ditya",
+							"description": "Optional. Insured Name",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ditya.mayang@zurich.co.id",
+							"description": "Optional. Insured Email",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "0812391293139",
+							"description": "Optional. Insured Mobile Number",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jl. Mangga No. 23",
+							"description": "Optional. Insured Address",
+							"type": "text"
+						},
+						{
+							"key": "provinceCode",
+							"value": "DKI Jakarta",
+							"description": "Optional. Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "cityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Optional. Get from prepare function",
+							"type": "text"
+						},
+						{
+							"key": "attentionName",
+							"value": "Ditya",
+							"description": "Optional. Hard copy policy receiver name.",
+							"type": "text"
+						},
+						{
+							"key": "attentionEmail",
+							"value": "ditya.zurich@gmail.com",
+							"description": "Optional. Hard copy policy receiver email.",
+							"type": "text"
+						},
+						{
+							"key": "attentionMobileNumber",
+							"value": "08191919119",
+							"description": "Optional. Hard copy policy receiver mobile number.",
+							"type": "text"
+						},
+						{
+							"key": "attentionAddress",
+							"value": "Jl. Rumahku No 11",
+							"description": "Optional. Hard copy policy receiver address.",
+							"type": "text"
+						},
+						{
+							"key": "attentionProvinceCode",
+							"value": "DKI Jakarta",
+							"description": "Optional. Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "attentionCityCode",
+							"value": "Kota Jakarta Barat",
+							"description": "Optional. Get from prepare function.",
+							"type": "text"
+						},
+						{
+							"key": "sendEmail",
+							"value": "1",
+							"description": "Flag 1 or 0 to send email.",
+							"type": "text"
+						},
+						{
+							"key": "documentFiles[Payment Receipt]",
+							"description": "Optional. Payment receipt.",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/finish",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"finish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "From Rico",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "apiKey",
+							"value": "567652d45b71979b714fb5d08c7f058a",
+							"type": "text"
+						},
+						{
+							"key": "requestNumber",
+							"value": "PA008-PR001-2007160013",
+							"type": "text"
+						},
+						{
+							"key": "remarkGuarantee",
+							"value": "Lampu\\nkaca",
+							"type": "text"
+						},
+						{
+							"key": "remarkNonGuarantee",
+							"value": "ban",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Hold",
+							"type": "text"
+						},
+						{
+							"key": "remark",
+							"value": "ini remark hold",
+							"description": "Status remark. optional.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/rico",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Callback Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policy\": [\r\n        {\r\n            \"id\": \"57953\",\r\n            \"requestNumber\": \"PA019-PR001-2208080021\",\r\n            \"status\": \"Approved\",\r\n            \"productId\": \"1\",\r\n            \"startDate\": \"3/6/22\",\r\n            \"endDate\": \"3/6/23\",\r\n            \"vehicleCode\": \"MITPAJ028\",\r\n            \"vehicleName\": \"MITSUBISHI NEW PAJERO SPORT DAKKAR LIMITED 4X4 A/T\",\r\n            \"vehicleLocationCode\": \"ID-JK\",\r\n            \"vehicleLocationName\": \"Daerah Khusus Ibukota Jakarta\",\r\n            \"vehicleFunctionCode\": \"OCC02\",\r\n            \"vehicleFunctionName\": \"PRIBADI / PRIVATE\",\r\n            \"vehicleConditionCode\": \"NEW\",\r\n            \"vehicleConditionName\": \"NEW\",\r\n            \"vehicleLicenseNumber\": \"B1234XX\",\r\n            \"vehicleChassisNumber\": \"3173052JJ240010\",\r\n            \"vehicleMachineNumber\": \"31730527K290011\",\r\n            \"vehicleYear\": \"2020\",\r\n            \"vehiclePrice\": \"422640000\",\r\n            \"totalSumInsured\": \"422640000\",\r\n            \"commissionPercentage\": \"0\",\r\n            \"discountPercentage\": \"0\",\r\n            \"sendHardCopyPolicy\": \"0\",\r\n            \"totalPremium\": \"0\",\r\n            \"personalIdType\": \"KTP\",\r\n            \"personalIdNumber\": \"3173052702930011\",\r\n            \"name\": \"Ditya\",\r\n            \"email\": \"ditya.mayang@zurich.co.id\",\r\n            \"mobileNumber\": \"0812391293139\",\r\n            \"address\": \"Jl. Mangga No. 23\",\r\n            \"provinceCode\": \"DKI Jakarta\",\r\n            \"provinceName\": \"DKI Jakarta\",\r\n            \"cityCode\": \"Kota Jakarta Barat\",\r\n            \"cityName\": \"Kota Jakarta Barat\",\r\n            \"sameHardCopyDeliveryAddress\": \"1\",\r\n            \"attentionName\": \"Ditya\",\r\n            \"attentionMobileNumber\": \"0812391293139\",\r\n            \"attentionAddress\": \"Jl. Mangga No. 23\",\r\n            \"attentionProvinceCode\": \"DKI Jakarta\",\r\n            \"attentionProvinceName\": \"DKI Jakarta\",\r\n            \"attentionCityCode\": \"Kota Jakarta Barat\",\r\n            \"attentionCityName\": \"Kota Jakarta Barat\",\r\n            \"cascoRate\": \"0\",\r\n            \"cascoPremium\": \"0\",\r\n            \"cascoAno\": \"\",\r\n            \"loadingRate\": \"0\",\r\n            \"loadingAno\": \"11111111\",\r\n            \"feeAmount\": \"54000\",\r\n            \"feeAno\": \"11111111\",\r\n            \"adminFee\": \"44000\",\r\n            \"createdDateTime\": \"8/8/22\",\r\n            \"createdByUserId\": \"77\",\r\n            \"updatedDateTime\": \"NULL\",\r\n            \"updatedByUserId\": \"NULL\",\r\n            \"submittedDateTime\": \"8/8/22\",\r\n            \"submittedByUserId\": \"77\",\r\n            \"resubmittedDateTime\": \"NULL\",\r\n            \"resubmittedByUserId\": \"NULL\",\r\n            \"backOrderDateTime\": \"NULL\",\r\n            \"backOrderByUserId\": \"NULL\",\r\n            \"backOrderRemark\": \"NULL\",\r\n            \"approvedDateTime\": \"8/8/22\",\r\n            \"approvedByUserId\": \"0\",\r\n            \"approvedRemark\": \"NULL\",\r\n            \"rejectedDateTime\": \"NULL\",\r\n            \"rejectedByUserId\": \"NULL\",\r\n            \"rejectedRemark\": \"NULL\",\r\n            \"adjustmentDateTime\": \"NULL\",\r\n            \"adjustmentByUserId\": \"NULL\",\r\n            \"adjustmentRemark\": \"NULL\",\r\n            \"adjustmentDocumentFileName\": \"NULL\",\r\n            \"holdDateTime\": \"NULL\",\r\n            \"holdByUserId\": \"NULL\",\r\n            \"holdRemark\": \"NULL\",\r\n            \"approveAdjustmentDateTime\": \"NULL\",\r\n            \"approveAdjustmentByUserId\": \"NULL\",\r\n            \"rejectAdjustmentDateTime\": \"NULL\",\r\n            \"rejectAdjustmentByUserId\": \"NULL\",\r\n            \"printPolicyDateTime\": \"NULL\",\r\n            \"printPolicyByUserId\": \"NULL\",\r\n            \"lockedByUserId\": \"NULL\",\r\n            \"lockedDateTime\": \"NULL\",\r\n            \"canceledByUserId\": \"NULL\",\r\n            \"canceledDateTime\": \"NULL\",\r\n            \"dutyFee\": \"10000\",\r\n            \"dutyFeeRequired\": \"1\",\r\n            \"discountAmount\": \"0\",\r\n            \"carePolicySynced\": \"0\",\r\n            \"careAno\": \"NULL\",\r\n            \"carePolicyNo\": \"NULL\",\r\n            \"carePolicyType\": \"NULL\",\r\n            \"carePolicyStatus\": \"NULL\",\r\n            \"subjectToNoClaimDate\": \"3/6/22\",\r\n            \"referenceInfo\": \"\",\r\n            \"discountFixed\": \"0\",\r\n            \"discountType\": \"Percent\",\r\n            \"remark1\": \"\",\r\n            \"remark2\": \"\",\r\n            \"remark3\": \"\",\r\n            \"finishedDateTime\": \"NULL\",\r\n            \"finishedByUserId\": \"NULL\",\r\n            \"finishedRemark\": \"NULL\",\r\n            \"surveyType\": \"Digital Survey\",\r\n            \"surveyLocked\": \"0\",\r\n            \"surveyLockPassword\": \"NULL\",\r\n            \"ricoSurveyResponse\": \"NULL\",\r\n            \"ricoSurveyRequest\": \"NULL\",\r\n            \"partnerId\": \"19\",\r\n            \"attentionEmail\": \"ditya.mayang@zurich.co.id\",\r\n            \"partnerStatusWebHookUrl\":\"https://webhook.site/284f3b89-844e-4407-8a26-b7a8c4dd19f8\"\r\n         }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webhook.site/284f3b89-844e-4407-8a26-b7a8c4dd19f8",
+					"protocol": "https",
+					"host": [
+						"webhook",
+						"site"
+					],
+					"path": [
+						"284f3b89-844e-4407-8a26-b7a8c4dd19f8"
+					],
+					"query": [
+						{
+							"key": "Postman-Token",
+							"value": "<calculated when request is sent>",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
